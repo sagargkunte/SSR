@@ -8,7 +8,9 @@ const __dirname = path.dirname(__filename);
 const app = express();
 const PORT = 8002;
 
+app.use(express.json()); //? This middleware is used to parse JSON data
 app.use('/' , staticRouter);
+app.use(express.urlencoded({extended:false})) //? This middleware is used to parse form data
 
 app.set('view engine','ejs');
 app.set('views', path.resolve(__dirname,"./views"));

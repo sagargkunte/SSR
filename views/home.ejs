@@ -1,13 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <style>
+        body {
+            font-style: "Segoe UI",Tahoma,Geneva,sans-serif;
+        }
+    </style>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home page</title>
 </head>
 <body>
+    <%
     <!-- <h1>Server Side Rendering (SSR)</h1>
     <h1>Hello he/her this fruit data is getting from server</h1> -->
-    homepage
+    <h1>hello </h1>
+    
+    <form action="http://localhost:8002/url" method="POST">
+        <label>Enter Your Original URL </label>
+        <input type="text" name="url" placeholder="https://example.com">
+        <button type="submit">Generate</button>
+    </form>
 </body>
 </html>
