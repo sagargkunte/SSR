@@ -4,12 +4,18 @@ const router = express.Router();
 
 
 router.get('/', (req,res) => {
-    return res.render('home');
+    // const fruits = ["apple","banana","orange"];
+    const student = {
+        name: "ram",
+        class: "10th",
+        sub : "math"
+    }
+    return res.render('home',{student});
 })
 
 router.post('/url',(req,res) => {
     return res.render('home',{
-        display:true
+        name:"sagar"
     });
 })
 export const staticRouter = router;
